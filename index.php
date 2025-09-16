@@ -16,5 +16,27 @@
     <button type="submit">Login</button>
 </form>
 
+<hr>
+<!-- Table -->
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Action</th>
+    </tr>
+
+    <tr>
+        <td>10</td>
+        <td>Yousuf</td>
+        <td>Izki</td>
+        <td>
+            <a href="edit.php?id=10">Edit</a>
+            <a href="delete.php?id=10">Delete</a>
+        </td>
+    </tr>
+</table>
+
 </body>
 </html>
