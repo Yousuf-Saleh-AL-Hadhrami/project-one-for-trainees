@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <!-- External Style -->
+     <link rel="stylesheet" href="./css/main.css">
+     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Internal Style-->
+    <style>
+        h1{
+            color:green !important;
+        }
+
+        h2,h3,h4{
+            color:blue;
+        }
+
+        .abc{
+
+            color: #015471;
+        }
+
+        .bg-primary{
+            background-color: blue;
+            color: white;
+        }
+
+        .w{
+            width: 50%;
+        }
+
+        .p-5{
+            padding:5px;
+        }
+
+        .text-center{
+            text-align:center;
+        }
+
+        .mx{
+            margin:auto;
+        }
+
+        img{
+            border: 2px solid #CCC;
+            border-radius: 10px;
+        }
+
+        .img-2{
+            border-left-width: 5px;
+            border-left-style: dotted;
+            border-left-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Headings -->
+     <h1 id="heading1" style="color:red;">Heading</h1> <!-- Inline Style-->
+     <h2 class="one">Heading</h2>
+     <h3 class="one two three">Heading</h3>
+     <h4 class="abc">Heading</h4>
+     <h5 class="bg-primary w">Heading</h5>
+     <h6 class="bg-primary w p-5 text-center mx">Heading</h6>
+
+     <hr>
+     <!-- Paragraph -->
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur molestias nihil quasi, aperiam ex id nam tempore quae saepe modi omnis fugiat aliquam officia! Repellendus quidem consequuntur consectetur culpa. Voluptates.</p>
+
+      <hr>
+      <!-- Image -->
+
+      <img src="./images.webp" alt="Cat Image">
+      <img src="./images.webp" class="img-2" alt="Cat Image">
+      <img src="./images.webp" alt="Cat Image">
+
+      <hr/>
+
+      <!-- Links -->
+
+      <a href="https://www.google.com">Google</a>
+      <a href="http://nizwa.moe.gov">Internal Website</a>
+      <a href="https://www.youtube.com">YouTube</a>
+
+
+      <!-- Unordered Lists -->
+
+       <ul type="square">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+       </ul>
+
+       <!-- Ordered List -->
+       <ol type="A">
+        <li><a href='#' id="heading1">Oman</a></li>
+        <li>Saudi Arabia</li>
+        <li>Bahrain</li>
+        <li>Yemen</li>
+        <li>Kuwait</li>
+       </ol>
+<hr>
+       <!-- Table -->
+
+       <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Job</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>10</td>
+                <td>Yousuf AL Hadhrami</td>
+                <td>Izki</td>
+                <td>Programmer</td>
+                <td>
+                    <a href="edit.html">Edit</a>
+                    <a href="delete.html">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th colspan="5">Footer</th>
+            </tr>
+        </tfoot>
+       </table>
+
+       <hr>
+
+       <!-- Form -->
+
+       <form action="" method="post">
+        <div>
+        <label for="id">ID</label>
+        <input type="text" name="id" id="id" placeholder="user id"> 
+        </div>
+
+        <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="user name">
+        </div>
+
+        <div>
+            <label for="address">Address</label>
+<select name="address" id="address">
+    <option value="">Select Address</option>
+    <option value="">Izki</option>
+    <option value="">Nizwa</option>
+    <option value="">Manah</option>
+    <option value="">Bahla</option>
+</select>
+        </div>
+
+        <div>
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" value="male"/>Male
+            <input type="radio" name="gender" value="female"/>Female
+        </div>
+
+          <div>
+            <label for="hobbies">Hobbies:</label><br>
+           <input type="checkbox" name="hoobies[]" value="football"/>  Football <br>
+            <input type="checkbox" name="hoobies[]" value="swimming"/>  Swimming <br>
+            <input type="checkbox" name="hoobies[]" value="reading"/>  Reading <br>
+        </div>
+
+        <input type="submit" name="save" value="Save">
+        <!-- <button type="submit">Save</button> -->
+        <input type="reset" value="Reset">
+
+       </form>
+
+    <script>
+
+
+//   setTimeout(test, 5000);
+
+//   function test(){
+
+//       document.getElementById("heading1").addEventListener('click', function(){
+//         // document.getElementById("heading1").style.backgroundColor = 'yellow';
+//         document.getElementById("heading1").style.cssText = `
+//     background-color: yellow;
+//     color: red;
+//     font-size: 24px;
+//     padding: 10px;
+//   `;})
+
+//       }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+
+
+- What is Programming? 
+
+- Interpreted VS Compiled Programming Languages 
+
+- IDE VS Text Editors 
+
+- What are Computer Numbers? 
+
+  - Binary = > [ 0 , 1 ]
+
+  - Octal => [ 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 ]
+
+  - Hexadecimal => [ 0 , 1 , 2 , 3 , 4 , 5 , 6 , , 8 , 9 , A , B , C , D , E , F ]
+
+  - Decimal =>  [ 0 , 1 , 2 , 3 , 4 , 5 , 6 , 8 , 9 ]
+
+  - Computer Storage Units: 
+
+    - Bit [ 0 , 1 ]
+    - Byte  [ 0 0 0 0 0 0 0 0 ] => 2^8 = 256 , Range [ 0 , 255 ]
+    - Kilobyte  => 1024 Byte 
+    - MegaByte  => 1024 Byte 
+    - GigaByte  => 1024 MegaByte
+    - TeraByte  => 1024 GigaByte
+
+
+
+    Byte Represntation: 
+
+           0       0      1      1     0       0      1     0  =>  50 in Decimal 
+
+
+           1       1      1      1     1       1      1     1  =>  255 in Decimal 
+           
+
+           I need 300 In Decimal : 
+           1       1      1      1     1       1      1     1  =>  255
+           0       0      1      0     1       1      0     1   =>  45
+
+           
+           I need 1024 In Decimal : 
+           1       1      1      1     1       1      1     1  =>  255
+           1       1      1      1     1       1      1     1   =>  45
+
+
+          128     64     32     16     8       4      2     1
+LSB       2^7    2^6    2^5    2^4    2^3    2^2    2^1    2^0     MSB
+
+                      
+                                             1024     512    256
+          2^15   2^14   2^13   2^12   2^11   2^10     2^9     2^8 .0
+
+          # &   
+
+
+
+
+

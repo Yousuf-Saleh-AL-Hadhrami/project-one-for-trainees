@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+         <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+    
+<h1 class="text-center">Welcome to Learning Bootstrap</h1>
+<h1 class="text-center text-dark bg-success">Welcome</h1>
+
+       <div class="container">
+
+<table class="table table-bordered table-hover text-center">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Job</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>10</td>
+                <td>Yousuf AL Hadhrami</td>
+                <td>Izki</td>
+                <td>Programmer</td>
+                <td>
+                    <a href="edit.html" class="btn btn-primary">Edit</a>
+                    <a href="delete.html" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th colspan="5">Footer</th>
+            </tr>
+        </tfoot>
+       </table>
+
+
+
+       <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-2 mt-1">
+
+            <div class="w-100 text-center h-100 bg-primary">Box One</div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-2 mt-1">
+            
+        <div class="w-100 text-center h-100 bg-primary">Box One</div>
+
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-2 mt-1">
+                      <div class="w-100 text-center h-100 bg-primary">Box One</div>
+
+            
+        </div>
+          <div class="col-lg-3 col-md-4 col-sm-2 mt-1">
+                      <div class="w-100 text-center h-100 bg-primary">Box One</div>
+
+            
+        </div>
+       </div>
+
+       <hr>
+
+        <form action="" method="post">
+        <div class="form-group">
+        <label for="id">ID</label>
+        <input class="form-control w-25" type="text" name="id" id="id" placeholder="user id"> 
+        </div>
+
+        <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="user name">
+        </div>
+
+        <div>
+            <label for="address">Address</label>
+<select class="form-select" id="address">
+    <option value="">Select Address</option>
+    <option value="">Izki</option>
+    <option value="">Nizwa</option>
+    <option value="">Manah</option>
+    <option value="">Bahla</option>
+</select>
+        </div>
+
+        <div>
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" value="male"/>Male
+            <input type="radio" name="gender" value="female"/>Female
+        </div>
+
+          <div>
+            <label for="hobbies">Hobbies:</label><br>
+           <input type="checkbox" name="hoobies[]" value="football"/>  Football <br>
+            <input type="checkbox" name="hoobies[]" value="swimming"/>  Swimming <br>
+            <input type="checkbox" name="hoobies[]" value="reading"/>  Reading <br>
+        </div>
+
+        <input type="submit" name="save" value="Save">
+        <!-- <button type="submit">Save</button> -->
+        <input type="reset" value="Reset">
+
+       </form>
+       </div>
+<script src="./js/bootstrap.bundle.min.js"> </script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script> -->
+</body>
+</html>
