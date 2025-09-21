@@ -2,19 +2,22 @@
 // Move processing to the top so headers (redirects) work before any output.
 session_start();
 
+// include 'constants.php';
+require_once "database.php";
+
 // Precomputed password hashes (for example purposes only)
-$users = [
-    [
-        'username' => 'admin',
-        'name' => 'Yousuf AL Hadhrami',
-        'password' => password_hash('123456', PASSWORD_DEFAULT),
-    ],
-    [
-        'username' => 'user2',
-        'name' => 'Ali AL Hadhrami',
-        'password' => password_hash('123456', PASSWORD_DEFAULT),
-    ]
-];
+// $users = [
+//     [
+//         'username' => 'admin',
+//         'name' => 'Yousuf AL Hadhrami',
+//         'password' => password_hash('123456', PASSWORD_DEFAULT),
+//     ],
+//     [
+//         'username' => 'user2',
+//         'name' => 'Ali AL Hadhrami',
+//         'password' => password_hash('123456', PASSWORD_DEFAULT),
+//     ]
+// ];
 
 $error = '';
 
@@ -22,21 +25,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username'] ?? '');
     $password = $_POST['password'] ?? '';
 
-    if ($username === '' || $password === '') {
-        $error = 'Please enter both username and password.';
-    } else {
-        foreach ($users as $user) {
-            if ($user['username'] === $username && password_verify($password, $user['password'])) {
-                // Successful login
-                $_SESSION['username'] = $user['username'];
-                $_SESSION['name'] = $user['name'];
-                header('Location: dashboard.php');
-                exit();
-            }
-        }
-        $error = 'Invalid username or password.';
+//     if ($username === '' || $password === '') {
+//         $error = 'Please enter both username and password.';
+//     } else {
+//         foreach ($users as $user) {
+//             if ($user['username'] === $username && password_verify($password, $user['password'])) {
+//                 // Successful login
+//                 $_SESSION['username'] = $user['username'];
+//                 $_SESSION['name'] = $user['name'];
+//                 header('Location: dashboard.php');
+//                 exit();
+//             }
+//         }
+//         $error = 'Invalid username or password.';
+//     }
+// }
+
+$query = " SELECT * FROM users WHERE username = '$username'";
+
+$result = mysqli_query($connection , $query);
+
+$user = mysqli_fetch_assoc($result);
+
+if($user)
+{
+    if(password_verify($password , $user['password'])){
+
+          $_SESSION['id'] = $user['id'];
+          $_SESSION['name'] = $user['name'];
+          $_SESSION['role'] = $user['role'];
+  
+          if($user['role'] == 'admin')
+          {
+            header("location:admin/dashboard.php");
+            exit;
+          } else {
+
+             header("location:user/dashboard.php");
+            exit;
+
+          }
+
+    }else {
+
+        echo 'Failed to Login';
     }
 }
+
+
+
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -65,6 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <?php if ($error): ?>
                         <div class="alert alert-danger" role="alert"><?php echo htmlspecialchars($error); ?></div>
                     <?php endif; ?>
+
 
                     <form action="login.php" method="post" novalidate>
                         <div class="mb-3">

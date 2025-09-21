@@ -2,10 +2,8 @@
 
 session_start();
 
-if (!isset($_SESSION['username'])) {
-    header('Location: login.php');
-    exit();
-}
+require "../authorize.inc.php";
+
 
 echo "Welcome to the dashboard, " . htmlspecialchars($_SESSION['name']) . "!";
 echo "<br>";
