@@ -14,3 +14,6 @@ if(!$connection)
    echo "Faild to Connect to database";
 }
 
+
+define('BASE_URL', '/mini-project/public/assets/');
+

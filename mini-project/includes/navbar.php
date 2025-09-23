@@ -15,13 +15,13 @@ if($_SESSION['role'] == 'admin'){?>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="dashboard.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="/mini-project/admin/dashboard.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="users.php">Users</a>
+          <a class="nav-link" href="/mini-project/admin/users/index.php">Users</a>
         </li>
             <li class="nav-item">
-          <a class="nav-link" href="departments.php">Departments</a>
+          <a class="nav-link" href="/mini-project/admin/departments/index.php">Departments</a>
         </li>
 
         <li class="nav-item dropdown">

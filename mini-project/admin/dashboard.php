@@ -4,7 +4,7 @@ session_start();
 
 if(!isset($_SESSION['is_loggin']) || $_SESSION['role'] != 'admin'){
 
-    header("location: ./../public/login.php");
+    header("location: ./../../public/login.php");
     exit;
 }
 
