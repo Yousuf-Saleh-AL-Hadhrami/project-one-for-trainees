@@ -1,7 +1,6 @@
 <?php
 
-
-class Person
+class Person extends Car implements Contract,Painting
 {
     // properties && visibility markers || Access Modifires 
    // public string $name;
@@ -10,8 +9,8 @@ class Person
     //public int $age;
     public $skills;
     public static $counter = 0;
-
     public const AGE = 18;
+    public $colors;
 
     // public function __construct($n, $add, $g = null)
     // {
@@ -25,12 +24,15 @@ class Person
     // }
 
     // Constructor property promotion
-    public function __construct(public $name, public $address , public $gender , public $age = null, ...$sks)
+    public function __construct(public $pname, public $address , public $gender , public $age = null, $n , $color , ...$sks)
     { 
+         parent::__construct($n,$color);
+          $this->cname = $n;
+          $this->color = $color;
+                 
+          self::$counter++;
 
-        self::$counter++;
-
-        $this->skills = $sks;
+          $this->skills = $sks;
 
        
     }
@@ -48,7 +50,7 @@ class Person
 
     public function setName($n)
     {
-        $this->name = $n;
+        $this->pname = $n;
 
         return $this;
     }
@@ -86,7 +88,7 @@ class Person
 
     public function getName()
     {
-        return $this->name;
+        return $this->pname;
     }
 
     public function getAddress()
@@ -104,6 +106,77 @@ class Person
         return
             $this->getName() . ' ' .
             $this->getAddress() . ' ' .
-            $this->getGender() . ' ';
+            $this->getGender() . ' '. 
+            $this->getPaints();
     }
+
+
+    // From Abstract class Car
+
+    public function move()
+    {
+        return 'The Car is Moving with speed 120Kmhs';
+    }
+
+
+    public function getFuel()
+    {
+        return 'The Fuel is Full';
+    }
+
+    public function startEngine()
+    {
+        return 'Engine is Started';
+    }
+
+    // From Interface Contract
+
+    public function One()
+    {
+        return 'Done';
+    }
+
+        public function Two()
+    {
+        return 'Done';
+    }
+
+
+        public function Three()
+    {
+        return 'Done';
+    }
+
+
+        public function Four()
+    {
+        return 'Done';
+    }
+
+
+        public function Five()
+    {
+        return 'Done';
+    }
+
+
+    public function paint(...$colors)
+    {
+       $this->colors = $colors;
+
+       return $this;
+    }
+
+    public function getPaints()
+    {
+        foreach($this->colors as $color)
+        {
+            echo " Colors are : " . $color . "<br>";
+        }
+    }
+
+
+
+
+    
 }
