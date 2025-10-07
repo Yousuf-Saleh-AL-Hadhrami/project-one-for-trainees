@@ -13,4 +13,7 @@ interface Contract{
 
     public function Five();
 
+public function makeSound();
+
+
 }

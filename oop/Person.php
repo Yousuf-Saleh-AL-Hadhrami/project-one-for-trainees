@@ -7,7 +7,7 @@ class Person extends Car implements Contract,Painting
     //public string $address;
     //public ?string $gender;
     //public int $age;
-    public $skills;
+    // public $skills= [];
     public static $counter = 0;
     public const AGE = 18;
     public $colors;
@@ -24,17 +24,16 @@ class Person extends Car implements Contract,Painting
     // }
 
     // Constructor property promotion
-    public function __construct(public $pname, public $address , public $gender , public $age = null, $n , $color , ...$sks)
-    { 
-         parent::__construct($n,$color);
-          $this->cname = $n;
-          $this->color = $color;
-                 
+    public function __construct(public $name, public $address , public $gender , public $age, public $sks = [] , $n , $co)
+    {
+
+        parent::__construct($n,$co);
+           $this->cname = $n;
+           $this->color = $co;
+
           self::$counter++;
 
-          $this->skills = $sks;
-
-       
+    
     }
 
 
@@ -50,7 +49,7 @@ class Person extends Car implements Contract,Painting
 
     public function setName($n)
     {
-        $this->pname = $n;
+        $this->name = $n;
 
         return $this;
     }
@@ -88,7 +87,7 @@ class Person extends Car implements Contract,Painting
 
     public function getName()
     {
-        return $this->pname;
+        return $this->name;
     }
 
     public function getAddress()
@@ -160,7 +159,7 @@ class Person extends Car implements Contract,Painting
     }
 
 
-    public function paint(...$colors)
+    public function setPaints(...$colors)
     {
        $this->colors = $colors;
 
@@ -173,6 +172,16 @@ class Person extends Car implements Contract,Painting
         {
             echo " Colors are : " . $color . "<br>";
         }
+    }
+
+    public function setSkills($sks)
+    {
+        $this->sks = $sks;
+    }
+
+    public function makeSound()
+    {
+        return 'Beeb';
     }
 
 

@@ -7,12 +7,13 @@ abstract class Car{
     private $fuel;
 
 
-    public function __construct($n, $color)
+    public function __construct($n,$co)
     {
         $this->cname = $n;
-        $this->color = $color;
+        $this->color = $co;
 
     }
+
 
     public function setName($name)
     {

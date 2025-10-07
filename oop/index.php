@@ -4,15 +4,17 @@ require './Car.php';  // Abstract Class
 require './Contract.php'; //Interface
 require './Painting.php'; //Interface
 require './Person.php';
+require './HasBook.php'; // trait
 require './Student.php';
 require './Course.php';
 
 
 
 
-//$p1 = new Person("Yousuf AL Hadhrami","Izki","Male", "Camry", "SkyBlue","Football","Programming","Swimming");
-$p1 = new Person("Yousuf AL Hadhrami","Izki","Male","Camry","skyBlue", "Programing");
-// $student1 = new Student("Yousuf AL Hadhrami","Izki","Male","Software Engineering","IT");
+
+
+//$p1 = new Person("Yousuf AL Hadhrami","Izki","Male", 30 , ["Football","Programming","Swimming"] ,"Camry" , "SkyBlue");
+$student1 = new Student("Yousuf AL Hadhrami","Izki","Male", 30 , ["Football","Programming","Swimming"] ,"Camry" , "SkyBlue",300,"Software Engineering","IT",3.7);
 // $student2 = new Student("AL Shima","Izki","Female",300, "Software Engineering","IT",3.9,123456);
 // $student3 = new Student("Ruwaida AL Tobi","Nizwa","Female",500, "Software Engineering","IT");
 // $student4= new Student("Mashael","Izki","Female",400, "Software Engineering","IT",3.8);
@@ -71,4 +73,13 @@ $p1 = new Person("Yousuf AL Hadhrami","Izki","Male","Camry","skyBlue", "Programi
 
 
 
-echo $p1->paint("silver","beige","red")->getInfo();
+// echo $p1->paint("silver","beige","red")->getInfo();
+
+
+
+$student1->setPaints("red","yellow");
+$student1->setSkills(["Football","Swimming"]);
+
+
+echo "<pre>";
+print_r($student1->book1());

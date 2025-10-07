@@ -1,0 +1,33 @@
+
+Notes For Search:
+
+- class vs object 
+- properties & methods
+- access modifiers [ public , protected , private ]
+- this & self 
+- parent & self 
+- constants & statics 
+- final class and final method  and final constant 
+- overriding 
+- constructor property promotion 
+- methods default parameters 
+- methods named parameters 
+- in php constructor is not inherited 
+- Inheritance of [ properties , constants , methods ]
+
+
+- Encapsulation => Done 
+- Abstraction => Done
+- Interfaces  => Done
+- Polymorphism => Done
+- Traits 
+
+
+- Enums
+- Magic Methods => __construct , __destruct , __call , __callstatic , __get , __set , __toString 
+- Object Cloning 
+- Namespaces 
+- Autoloading 
+- Composer and Autoloading
+/
+?>?>/./>

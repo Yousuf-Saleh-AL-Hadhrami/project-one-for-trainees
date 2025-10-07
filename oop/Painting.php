@@ -2,5 +2,5 @@
 
 interface Painting
 {
-      public function paint(...$colors);
+      public function setPaints(...$colors);
 }

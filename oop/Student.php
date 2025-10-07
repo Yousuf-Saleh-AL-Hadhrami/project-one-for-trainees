@@ -1,8 +1,11 @@
 <?php 
 
 
-class Student extends Person
+class Student extends Person implements Contract
 {
+
+    use HasBook; // trait
+
    public $studentId;
    public $specialization;
    public $department;
@@ -12,17 +15,23 @@ class Student extends Person
    private $marks = [];
 
 
-   public function __construct($n, $add, $g , $stdid = null , $sps = null , $dept = null, $gpa = null,$pass = null)
+   public function __construct($name, $address , $gender , $age, $sks = [] , $n , $co, $stdId , $sps , $dept , $gpa = null)
    {
 
-          parent::__construct($n, $add, $g, $pass);
+          parent::__construct($name, $address , $gender , $age, $sks = [] , $n , $co);
 
-          $this->studentId = $stdid;
+          $this->name = $name;
+          $this->address = $address;
+          $this->gender = $gender;
+          $this->age = $age;
+          $this->sks = $sks;
+          $this->cname = $n;
+          $this->color= $co;
+          $this->studentId = $stdId;
           $this->specialization = $sps;
           $this->department = $dept;
           $this->gpa = $gpa;
-          $this->password = password_hash($pass,PASSWORD_DEFAULT);
-
+       
 
    }
 
@@ -61,8 +70,13 @@ class Student extends Person
               $this->studentId . ' '.
               $this->specialization . ' '.
               $this->department . ' ' . 
-              $this->gpa . ' ' . print_r($this->marks) ;
+              $this->gpa ;
                
+   }
+
+   public function makeSound()
+   {
+    return 'Beep Beep';
    }
 
 }
