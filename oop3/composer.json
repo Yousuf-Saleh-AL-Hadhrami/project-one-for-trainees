@@ -1,0 +1,21 @@
+{
+    "name": "moe1/oop3",
+    "description": "This is autoloading using composer",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Moe1\\Oop3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yousuf AL Hadhrami",
+            "email": "izkiboy@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "nesbot/carbon": "^3.10"
+    }
+}
