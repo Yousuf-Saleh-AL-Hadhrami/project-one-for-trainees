@@ -1,6 +1,6 @@
 <?php 
 
-namespace Moe1\Oop3\Car;
+namespace App\Car;
 
 abstract class Car
 {

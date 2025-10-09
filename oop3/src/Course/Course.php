@@ -1,6 +1,6 @@
 <?php 
 
-namespace Moe1\Oop3\Course;
+namespace App\Course;
 
 interface Course
 {

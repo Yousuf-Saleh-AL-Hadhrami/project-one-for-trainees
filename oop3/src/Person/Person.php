@@ -1,8 +1,8 @@
 <?php 
 
-namespace Moe1\Oop3\Person;
+namespace App\Person;
 
-use Moe1\Oop3\Car\Car;
+use App\Car\Car;
 
 class Person extends Car{
 

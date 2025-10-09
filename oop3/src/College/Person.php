@@ -1,6 +1,6 @@
 <?php 
 
-namespace Moe1\Oop3\College;
+namespace App\College;
 
 
 class Person{

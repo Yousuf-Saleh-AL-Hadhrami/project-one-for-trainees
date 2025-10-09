@@ -1,10 +1,10 @@
 <?php 
 
-namespace Moe1\Oop3\Student;
+namespace App\Student;
 
-use Moe1\Oop3\Person\Person;
-use Moe1\Oop3\University\University;
-use Moe1\Oop3\Course\Course;
+use App\Person\Person;
+use App\University\University;
+use App\Course\Course;
 
 class Student extends Person implements University, Course {
 
@@ -21,6 +21,7 @@ class Student extends Person implements University, Course {
         $this->stdId = $id;
         $this->dept = $dept;
         $this->major = $major;
+ 
     }
 
     public function registerStudent($uname)
